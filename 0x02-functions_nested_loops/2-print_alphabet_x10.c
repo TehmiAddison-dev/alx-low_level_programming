@@ -3,10 +3,11 @@
 * main - repeats the print_alphabet 10 times.
 * Return: 0 on sucess.
 */
-int main(void)
+void print_alphabet_x10(void)
 {
-int i; int c;
-for (i = 0; i < 10; i++)
+int i;
+char c;
+for (i = 0; i < 10; ++i)
 {
 for (c = 'a'; c <= 'z'; c++)
 {

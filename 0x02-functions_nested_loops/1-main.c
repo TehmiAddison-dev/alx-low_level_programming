@@ -1,7 +1,7 @@
-#include "school.h"
+#include "main.h"
 /**
-* main - check the code for School students.
-* Return: 0 on success.
+* main - check the code
+* Return: Always 0.
 */
 int main(void)
 {
