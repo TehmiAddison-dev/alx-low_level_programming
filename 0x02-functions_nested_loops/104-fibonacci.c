@@ -11,7 +11,7 @@ unsigned long m, n, o, carry;
 a = 0;
 i = 0;
 j = 1;
-for (a = 1; a <= 98; a++)
+for (a = 1; a <= 91; a++)
 {
 k = i + j;
 i = j;
