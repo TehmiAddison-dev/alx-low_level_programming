@@ -6,15 +6,39 @@
 int main(void)
 {
 int a;
-int fibonacci[98], sum = 2;
-fibonacci[0] = 1;
-fibonacci[1] = 2;
-for (a = 2; a < 98; a++)
+unsigned long i, j, k;
+unsigned long m, n, o, carry;
+a = 0;
+i = 0;
+j = 1;
+for (a = 1; a <= 98; a++)
 {
-fibonacci[a] = fibonacci[a - 1] + fibonacci[a - 2];
-if (fibonacci[a] % 2 == 0 && fibonacci[a] < 98)
-sum += fibonacci[a];
+k = i + j;
+i = j;
+j = k;
+printf("%lu, ", k);
 }
-printf("%d\n", sum);
+m = i % 1000;
+i = i / 1000;
+n = j % 1000;
+j = j / 1000;
+while (a <= 98)
+{
+carry = (m + n) / 1000;
+o = (m + n) - carry * 1000;
+k = (i + j) + carry;
+m = n;
+n = o;
+i = j;
+j = k;
+if (o >= 100)
+printf("%lu%lu", k, o);
+else
+printf("%lu0%lu", k, o);
+if (a != 98)
+printf(", ");
+a++;
+}
+putchar('\n');
 return (0);
 }
