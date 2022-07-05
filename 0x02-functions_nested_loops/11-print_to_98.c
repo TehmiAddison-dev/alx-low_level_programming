@@ -9,12 +9,12 @@
 */
 void print_to_98(int i)
 {
-if (n <= 98)
+if (i <= 98)
 {
-for (; n <= 98; n++)
+for (; i <= 98; i++)
 {
-printf("%d", n);
-if (n == 98)
+printf("%d", i);
+if (i == 98)
 continue;
 printf(", ");
 }
@@ -22,10 +22,10 @@ printf("\n");
 }
 else
 {
-for (; n >= 98; n--)
+for (; i >= 98; i--)
 {
-printf("%d", n);
-if (n == 98)
+printf("%d", i);
+if (i == 98)
 continue;
 printf(", ");
 }
