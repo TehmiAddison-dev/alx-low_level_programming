@@ -1,7 +1,7 @@
 #include <unistd.h>
-#include "_putchar.h"
+#include "school.h"
 /**
-* main - prints the word _putchar, followed by a new line.
+* main - prints the word "_putchar", followed by a new line.
 * Return: 0 on success.
 */
 int main(void)
