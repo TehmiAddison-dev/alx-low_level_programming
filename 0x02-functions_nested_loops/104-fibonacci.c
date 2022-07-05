@@ -6,17 +6,15 @@
 int main(void)
 {
 int a;
-int fibonacci[98];
+int fibonacci[98], sum = 2;
 fibonacci[0] = 1;
 fibonacci[1] = 2;
-printf("%d, %d, ", fibonacci[0], fibonacci[1]);
 for (a = 2; a < 98; a++)
 {
 fibonacci[a] = fibonacci[a - 1] + fibonacci[a - 2];
-if (a == 98)
-printf("%d\n", fibonacci[a]);
-else
-printf("%d, ", fibonacci[a]);
+if ((fibonacci[a] % 2 == 0 && fibonacci[a] < 98)
+sum += fibonacci[a];
 }
+printf("%d\n", sum);
 return (0);
 }
