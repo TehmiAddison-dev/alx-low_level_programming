@@ -16,8 +16,8 @@ for (b = 0; b <= n; b++)
 res = (a * b);
 if (b != 0)
 {
- _putchar(',');
- _putchar(' ');
+_putchar(',');
+_putchar(' ');
 }
 if (res < 10 && b != 0)
 {
@@ -34,7 +34,7 @@ _putchar((res % 10) + '0');
 else if (res >= 100 && b != 0)
 {
 _putchar((res / 100) + '0');
-_putchar((res /10) % 10 + '0');
+_putchar((res / 10) % 10 + '0');
 _putchar((res % 10) + '0');
 }
 else
