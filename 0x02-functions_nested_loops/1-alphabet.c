@@ -1,14 +1,14 @@
 #include "school.h"
 /**
-* main - prints the english alphabet from a to z.
+* main - prints the English alphabet from a to z.
 * Return: 0 on success.
 */
-int main(void)
+void print_alphabet(void)
 {
-char c;
-for (c = 'a'; c <= 'z'; c++)
+char i;
+for (i = 'a'; i <= 'z'; i++)
 {
-_putchar(c);
+_putchar(i);
 }
 _putchar('\n');
 }
