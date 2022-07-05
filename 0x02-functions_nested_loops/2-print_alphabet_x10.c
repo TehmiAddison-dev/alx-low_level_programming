@@ -1,18 +1,18 @@
-#include "school.h"
+#include "main.h"
 /**
-* main - repeats the print_alphabet 10 times.
-* Return: 0 on sucess.
+* print_alphabet_x10 - Check main
+* Description: function uses _putchar function to print
+* alphabet in lowercase 10 times
+* Return: Nothing.
 */
 void print_alphabet_x10(void)
 {
 int i;
-char c;
-for (i = 0; i < 10; ++i)
+char j;
+for (i = 0; i < 10; i++)
 {
-for (c = 'a'; c <= 'z'; c++)
-{
+for (j = 'a'; j <= 'z'; j++)
 _putchar(c);
-}
 _putchar('\n');
 }
 }
