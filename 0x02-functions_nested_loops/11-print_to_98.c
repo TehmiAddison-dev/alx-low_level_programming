@@ -29,6 +29,6 @@ if (i == 98)
 continue;
 printf(", ");
 }
-print("\n");
+printf("\n");
 }
 }
