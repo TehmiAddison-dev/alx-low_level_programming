@@ -8,10 +8,10 @@ int main(void)
 int i;
 printf("Infinite loop incoming :(\n");
 i = 0;
-/* while (i < 10)
-{
-putcahr(i);
-}*/
+/*while (i < 10)*/
+/*{*/
+/*putcahr(i);*/
+/*}*/
 printf("Infinite loop avoided! \\0/\n");
 retutn (0);
 }
