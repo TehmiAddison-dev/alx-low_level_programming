@@ -1,38 +1,38 @@
 #include "main.h"
 /**
- * print_number - prints a number
- * @n: Input number
+ * print_number - prints a number 
+ * @n: Number to print
+ *
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
  */
-
 void print_number(int n)
 {
-	long len, res, i, temp, expo;
+	int ten, i, neg;
+	unsigned int digit, digit2;
 
-	res = n;
-	expo = len =  1;
-/*Check negatives*/
-	if (res < 0)
+	ten = 1;
+	if (n < 0)
 	{
-		res *= -1;
+		n = n * -1;
+		neg = 1;
+	}
+	digit = n;
+	digit2 = n;
+	while (digit >= 10)
+	{
+		digit = digit / 10;
+		ten = ten * 10;
+	}
+	if (neg == 1)
+	{
 		_putchar('-');
 	}
-
-/**/
-	temp = res;
-	while (temp >= 10)
+	_putchar('0' + (digit2 / ten));
+	i = ten / 10;
+	while (i >= 1)
 	{
-		len++;
-		temp /= 10;
+		_putchar('0' + (digit2 / i) % 10);
+		i = i / 10;
 	}
-
-/*Create Exponent*/
-	for (i = 1; i < len; i++)
-		expo *= 10;
-/*Main */
-	while (expo > 1)
-	{
-		_putchar((res / expo) % 10 + '0');
-		expo /= 10;
-	}
-	_putchar(res % 10 + '0');
 }
