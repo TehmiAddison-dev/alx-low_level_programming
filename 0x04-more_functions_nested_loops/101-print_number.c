@@ -3,15 +3,13 @@
  * print_number - prints a number
  * @n: Input number
  */
-
 void print_number(int n)
 {
-	long len, res, i, temp, expo;
-
-	res = n;
-	expo = len =  1;
+long len, res, i, temp, expo;
+res = n;
+expo = len =  1;
 /*Check negatives*/
-	if (res < 0)
+ if (res < 0)
 	{
 		res *= -1;
 		_putchar('-');
