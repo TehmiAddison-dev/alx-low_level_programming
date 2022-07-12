@@ -23,7 +23,7 @@ if (s[a + 1] < 48 || s[a + 1] > 57)
 break;
 }
 }
-if ( c < 0)
+if (c < 0)
 b *= -1;
 return (b);
 }
