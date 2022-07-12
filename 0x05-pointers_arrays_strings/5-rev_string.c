@@ -14,7 +14,7 @@ while (s[size] != '\0')
 size++;
 }
 size--;
-for (i = 0; i <=size; i++)
+for (i = 0; i <= size; i++)
 {
 rev[i] = s[size - i];
 }
