@@ -15,7 +15,7 @@ srand(time(NULL));
 for (a = 0; a < 100; a++)
 {
 randnum = random() % 127;
-if  (randnum > 32)
+if (randnum > 32)
 {
 p[b] = randnum;
 b++;
