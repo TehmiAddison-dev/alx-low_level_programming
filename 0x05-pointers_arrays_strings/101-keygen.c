@@ -12,7 +12,7 @@ int b = 0;
 int randnum;
 char p[100];
 srand(time(NULL));
-for (i = 0; i < 100; i++)
+for (a = 0; a < 100; a++)
 {
 randnum = random() % 127;
 if  (randnum > 32)
