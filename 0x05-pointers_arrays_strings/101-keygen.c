@@ -26,7 +26,7 @@ for (a = 0; password[a]; a++)
 {
 if (password[a] >= (33 + x))
 {
-password[index] -= x;
+password[a] -= x;
 break;
 }
 }
