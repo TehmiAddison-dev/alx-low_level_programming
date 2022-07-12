@@ -1,15 +1,15 @@
 #include "main.h"
 /**
-* _puts - prints a string, followed by a new line, to stdout.
-* @str: input a string.
-* Return: A;ways 0.
+* _puts - prints a string, followed by a new line.
+* @str: input string to ptint.
+* Return: Always 0.
 */
 void _puts(char *str)
 {
-int msg;
-for (msg = 0; *(str + msg) != '\0'; msg++)
+while (*str != '\0')
 {
-_putchar(str[msg]);
+_putchar(*str);
+str++;
 }
 _putchar('\n'); 
 }
