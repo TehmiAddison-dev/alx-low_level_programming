@@ -6,17 +6,28 @@
 * @n: integer.
 * Return: Always 0.
 */
-char *_strncat(char *dest, char *src, int n);
+char *_strncat(char *dest, char *src, int n)
 {
-int x = 0;
-int y = 0;
-while (dest[x] != '\0')
-x++;
-while (src[y] != '\0' && y < n)
-{
-dest[x] = src[y];
-y++;
-x++;
-}
-return (dest);
+	int srclen = 0, i = 0;
+	char *temp = dest, *start = src;
+
+	while (*src)
+	{
+		srclen++;
+		src++;
+	}
+
+	while (*dest)
+		dest++;
+
+	if (n > srclen)
+		n = srclen;
+
+	src = start;
+
+	for (; i < n; i++)
+		*dest++ = *src++;
+
+	*dest = '\0';
+	return (temp);
 }
