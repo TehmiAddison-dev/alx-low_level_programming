@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
 * *rot13 - encodes a string using rot13.
 * @s: int type array pointer
