@@ -4,24 +4,26 @@
 * _strstr -  a function that locates a substring.
 * @haystack: an input string to search in
 * @needle: an input string to locate into string haystack
-* Return:  a pointer to the beginning of the located substring,
-* or NULL if the substring is not found.
+* Return: NULL
 */
 char *_strstr(char *haystack, char *needle)
 {
-char *startn = needle, *starth = haystack;
-while (*haystack)
+int a;
+int b;
+int c;
+for (a = 0; haystack[a] != '\0'; a++)
 {
-starth = haystack;
-needle = startn;
-while (*haystack == *needle)
+for c = a, b = 0; needle[b] != '\0'; b++, c++)
 {
-haystack++;
-needle++;
+if (haystack[c] != needle[b] || haystack[c] == '\0')
+{
+break;
 }
-if (*needle == '\0')
-return (haystack);
-haystack = starth + 1;
+}
+if (needle[b] == '\0')
+{
+return (haystack + 1);
+}
 }
 return (NULL);
 }
