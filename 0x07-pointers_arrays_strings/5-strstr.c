@@ -1,10 +1,9 @@
-#include <stdio.h>
-#include "main.h" 
+#include "holberton.h"
 /**
-* _strstr -  a function that locates a substring.
-* @haystack: an input string to search in
-* @needle: an input string to locate into string haystack
-* Return: 0.
+* _strstr - locates a substring
+* @haystack: string
+* @needle: string
+* Return: a pointer to the beginning of a substring
 */
 char *_strstr(char *haystack, char *needle)
 {
@@ -21,7 +20,7 @@ break;
 }
 if (needle[j] == '\0')
 {
-return (haystack[i]);
+return (&haystack[i]);
 }
 i++;
 }
