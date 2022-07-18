@@ -6,6 +6,7 @@
 * @needle: an input string to locate into string haystack
 * Return: NULL
 */
+
 char *_strstr(char *haystack, char *needle)
 {
 int a;
@@ -20,9 +21,9 @@ if (haystack[c] != needle[b] || haystack[c] == '\0')
 break;
 }
 }
-if (needle[b] == '\0')
+if (needle[j] == '\0')
 {
-return (haystack + 1);
+return (haystack + i);
 }
 }
 return (NULL);
