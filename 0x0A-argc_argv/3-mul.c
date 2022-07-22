@@ -1,3 +1,4 @@
+#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 /**
@@ -6,7 +7,6 @@
 * @argv: argument vector of pointers to strings
 * Return: Always 0.
 */
-
 int main(int argc, char *argv[])
 {
 int mul;
