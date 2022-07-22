@@ -1,37 +1,57 @@
 #include <stdio.h>
+#include <ctype.h>
 #include <stdlib.h>
+#include <string.h>
 /**
-* main - prints minimum number of coins to make change for an amount of money.
-* @argc: number of arguments passed to the function
-* @argv: argument vector of pointers to strings
-* Return: 0 if no errors, else 1
+* checker - checks for valid input
+* @argc: argument count
+* @i: counter for argv[]
+* @j: counter for argv[][]
+* @argv: argument vector
+* Return: 0 on success, 1 on failure
+*/
+
+int checker(int argc, int i, unsigned int j, char *argv[])
+{
+for (i = 1; i <= argc; i++)
+for (j = 0; argv[i] != '\0' && j < strlen(argv[i]); j++)
+if (isdigit(argv[i][j]) == 0)
+return (1);
+return (0);
+}
+/**
+* main - Prints the minimum number of coins
+* to make change for an amount of cents.
+* @argc: argument count
+* @argv: argument vector
+* Return: 0 on success
 */
 int main(int argc, char *argv[])
 {
-int a, n = 0, i, t;
-int c[5] = {25, 10, 5, 2, 1};
-if (argc != 2)
+unsigned int cents;
+int coins;
+cents = coins = 0;
+if (argc == 2)
 {
-puts("Error");
-return (1);
+if (argv[1][0] == '-')
+printf("0\n");
+if (checker(argc, 1, 0, argv) == 0)
+{
+cents = atoi(argv[1]);
+for ( ; cents >= 25; coins++, cents -= 25)
+;
+for ( ; cents >= 10; coins++, cents -= 10)
+;
+for ( ; cents >= 5; coins++, cents -= 5)
+;
+for ( ; cents >= 2; coins++, cents -= 2)
+;
+for ( ; cents >= 1; coins++, cents--)
+;
+printf("%d\n", coins);
 }
-a = atoi(argv[1]);
-if (a <= 0)
-{
-puts("0");
-return (1);
 }
 else
-{
-for (i = 0; i < 5; i++)
-{
-t = a / c[i];
-a -= t * c[i];
-n += t;
-if (a == 0)
-break;
-}
-}
-printf("%d\n", n);
+printf("Error\n");
 return (0);
 }
