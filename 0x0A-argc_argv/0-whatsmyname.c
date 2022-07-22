@@ -7,6 +7,7 @@
 */
 int main(int arg _attribute_((unused)), char *argv[])
 {
+argc--; /*added to pass checks*/
 printf("%s\n", argv[0]);
 return (0);  
 }
