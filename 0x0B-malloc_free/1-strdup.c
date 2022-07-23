@@ -12,8 +12,7 @@ char *p;
 unsigned int len, j;
 if (str == NULL)
 return (NULL);
-for (len = 0; str[len] != '\0'; len++)
-;
+for (len = 0; str[len] != '\0'; len++);
 len++;
 if (len < 1)
 return (NULL);
