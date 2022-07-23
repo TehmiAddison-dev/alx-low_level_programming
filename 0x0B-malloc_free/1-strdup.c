@@ -6,7 +6,6 @@
 * @str: the string to copy
 * Return: pointer to a new buffer
 */
-
 char *_strdup(char *str)
 {
 char *p;
