@@ -1,36 +1,42 @@
-#include <stdlib.h>
 #include "main.h"
 /**
-* argstostr - concatenates all arguments of program.
-* @ac: argument count
-* @av: pointer to argument vectors
-* Return: pointer to new buffer with all arguments as 1 string.
+* argstostr - prints args
+* @ac: takes in width of grid
+* @av: height of grid
+* Return: the args one line at a time
 */
 
 char *argstostr(int ac, char **av)
 {
-int i, j, len, bufferlen;
-char *p;
-if (ac == 0)
+char *str;
+int count = 0, a = 0, b = 0, c = 0;
+if (ac == 0 || av == NULL)
 return (NULL);
-if (av == NULL)
-return (NULL);
-i = j = len = bufferlen = 0;
-for (i = 0; av[i]; i++)
+while (a < ac)
 {
-for (j = 0; av[i][j]; j++)
-len++;
-}
-p = (char *)malloc(len * sizeof(char) + ac + 1);
-if (p == NULL)
-return (NULL);
-for (i = 0; av[i]; i++)
+b = 0;
+while (av[a][b] != '\0')
 {
-for (j = 0; av[i][j]; j++, bufferlen++)
-p[bufferlen] = av[i][j];
-p[bufferlen] = '\n';
-bufferlen++;
+count++;
+b++;
 }
-p[bufferlen] = '\0';
-return (p);
+a++;
+}
+count = count + ac + 1;
+str = malloc(sizeof(char) * count);
+if (str == NULL)
+{
+return (NULL);
+}
+for (a = 0; a < ac; a++)
+{
+for (b = 0; av[a][b] != '\0'; b++)
+{
+str[c] = av[a][b];
+c++;
+}
+str[c] = '\n';
+c++;
+}
+return (str);
 }
