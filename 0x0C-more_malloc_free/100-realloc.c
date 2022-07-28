@@ -7,7 +7,6 @@
 * @new_size: new size in bytes of memory to be allocated
 * Return: void pointer to new memory location
 */
-
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 char *new_location, *new_ptr;
