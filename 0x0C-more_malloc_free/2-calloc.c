@@ -6,7 +6,6 @@
 * @size: size of nmemb
 * Return: returns pointer to allocated space, or NULL on failure
 */
-
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 unsigned int i = 0;
