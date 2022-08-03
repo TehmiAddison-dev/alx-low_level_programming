@@ -1,5 +1,6 @@
-#include <stdlib.h>
 #include "3-calc.h"
+#include <stdlib.h>
+#include <stdio.h>
 /**
 * get_op_func - decides which math to use based on the operator
 * @s: pointer to string
@@ -7,7 +8,6 @@
 */
 int (*get_op_func(char *s))(int, int)
 {
-int i;
 op_t ops[] = {
 {"+", op_add},
 {"-", op_sub},
@@ -16,6 +16,7 @@ op_t ops[] = {
 {"%", op_mod},
 {NULL, NULL}
 };
+int i;
 i = 0;
 while (i < 5)
 {
