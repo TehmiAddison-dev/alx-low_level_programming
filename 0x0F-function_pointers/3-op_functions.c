@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include "3-calc.h"
 /**
 * op_add - adds two numbers
 * @a: first number
@@ -28,7 +27,7 @@ return (a - b);
 */
 int op_mul(int a, int b)
 {
-return (a * b)
+return (a * b);
 }
 /**
 * op_div - divides two numbers
@@ -43,7 +42,7 @@ if (b == 0)
 printf("Error\n");
 exit(100);
 }
-return (a / b)
+return (a / b);
 }
 /**
 * op_mod - divides two numbers and returns the remainder
@@ -58,5 +57,8 @@ if (b == 0)
 printf("Error\n");
 exit(100);
 }
-return (a % b)
+else
+{
+return (a % b);
+}
 }
