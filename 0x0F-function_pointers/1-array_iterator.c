@@ -6,12 +6,12 @@
 * @action: pointer to the function
 * Return: Nothing
 */
+
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
-if (action == NULL || array == NULL)
-while (size-- > 0)
-{
-action(*array);
-array++;
-}
+size_t i;
+if (!array || !action)
+return;
+ for (i = 0; i < size; i++)
+action(array[i]);
 }
