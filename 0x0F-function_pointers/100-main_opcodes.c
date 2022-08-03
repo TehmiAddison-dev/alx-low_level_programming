@@ -6,7 +6,6 @@
 *@argv: the parameeters in the case the number ob bytes.
 * Return: 0 in succes
 */
-
 int main(int argc, char *argv[])
 {
 int i, n;
