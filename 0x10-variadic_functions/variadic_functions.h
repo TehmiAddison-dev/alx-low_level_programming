@@ -9,7 +9,6 @@
 * @func: pointer to the functions that prints all
 */
 typedef struct print_all
-
 {
 char all;
 void (*func)(va_list arguments);
