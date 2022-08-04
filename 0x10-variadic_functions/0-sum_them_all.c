@@ -5,7 +5,6 @@
 * @n: number of parameters received
 * Return: 0 if n is 0 of the sum of parameters
 */
-
 int sum_them_all(const unsigned int n, ...)
 {
 unsigned int i;
