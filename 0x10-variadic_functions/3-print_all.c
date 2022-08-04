@@ -3,7 +3,6 @@
 * print_char - print characters
 * @arguments: input arguments
 */
-
 void print_char(va_list arguments)
 {
 printf("%c", va_arg(arguments, int));
