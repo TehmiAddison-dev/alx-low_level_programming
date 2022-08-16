@@ -10,3 +10,4 @@ size_t i;
 for (i = 0; h; i++)
 h = h->next;
 return (i);
+}
