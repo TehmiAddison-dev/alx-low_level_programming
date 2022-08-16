@@ -24,3 +24,4 @@ while (current->next != NULL)
 current = current->next;
 current->next = new;
 return (*head);
+}
