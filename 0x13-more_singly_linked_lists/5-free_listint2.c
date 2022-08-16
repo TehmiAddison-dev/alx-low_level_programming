@@ -17,3 +17,4 @@ current = current->next;
 free(temp);
 }
 *head = NULL;
+}
