@@ -34,3 +34,4 @@ return (NULL);
 new->next = current->next;
 current->next = new;
 return (new);
+}
