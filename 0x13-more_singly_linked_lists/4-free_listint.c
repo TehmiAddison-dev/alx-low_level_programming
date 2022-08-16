@@ -10,3 +10,4 @@ if (head == NULL)
 return;
 free_listint(head->next);
 free(head);
+}
