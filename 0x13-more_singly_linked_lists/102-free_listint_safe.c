@@ -43,8 +43,7 @@ return (0);
 /**
 * free_listint_safe - Frees a listint_t list safely (ie.
 * can free lists containing loops)
-* @h: A pointer to the address of
-* the head of the listint_t list.
+* @h: A pointer to the address of the head of the listint_t list.
 * Return: The size of the list that was freed.
 * Description: The function sets the head to NULL.
 */
