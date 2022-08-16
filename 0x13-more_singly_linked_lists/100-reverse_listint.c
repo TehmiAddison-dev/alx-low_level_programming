@@ -20,3 +20,4 @@ behind = *head;
 }
 (*head)->next = behind;
 return (*head);
+}
