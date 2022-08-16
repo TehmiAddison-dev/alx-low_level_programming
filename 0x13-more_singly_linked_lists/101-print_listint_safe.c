@@ -68,3 +68,4 @@ head = head->next;
 printf("-> [%p] %d\n", (void *)head, head->n);
 }
 return (nodes);
+}
