@@ -30,3 +30,4 @@ subsequent = current->next;
 current->next = subsequent->next;
 free(subsequent);
 return (1);
+}
