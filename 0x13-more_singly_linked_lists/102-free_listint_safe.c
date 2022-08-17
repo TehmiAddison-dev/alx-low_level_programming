@@ -1,99 +1,46 @@
 #include "lists.h"
-
-size_t looped_listint_count(listint_t *head);
-size_t free_listint_safe(listint_t **h);
-
+int is_visited2(listint_t *node, listint_t **visited, int count);
 /**
- * looped_listint_count - Counts the number of unique nodes
- * in a looped listint_t linked list.
- *
- * @head: A pointer to the head of the listint_t to check.
- *
- * Return: If the list is not looped - 0.
- * Otherwise - the number of unique nodes in the list.
- */
-size_t looped_listint_count(listint_t *head)
+* free_listint_safe - prints a list even with loop
+* @head: pointer to head
+* Return: number of nodes
+*/
+
+size_t free_listint_safe(listint_t **head)
 {
-	listint_t *tortoise, *hare;
-	size_t nodes = 1;
-
-	if (head == NULL || head->next == NULL)
-		return (0);
-
-	tortoise = head->next;
-	hare = (head->next)->next;
-
-	while (hare)
-	{
-		if (tortoise == hare)
-		{
-			tortoise = head;
-			while (tortoise != hare)
-			{
-				nodes++;
-				tortoise = tortoise->next;
-				hare = hare->next;
-			}
-
-			tortoise = tortoise->next;
-			while (tortoise != hare)
-			{
-				nodes++;
-				tortoise = tortoise->next;
-			}
-
-			return (nodes);
-		}
-
-		tortoise = tortoise->next;
-		hare = (hare->next)->next;
-	}
-
-	return (0);
+listint_t *tmp, *visited[1024];
+int count = 0;
+if (!head)
+return (-1);
+while (*head)
+{
+if (is_visited2(*head, visited, count))
+{
+*head = NULL;
+break;
 }
-
-
+visited[count++] = *head;
+tmp = (*head)->next;
+free(*head);
+*head = tmp;
+}
+return (count);
+}
 /**
- * free_listint_safe - Frees a listint_t list safely (ie.
- * can free lists containing loops)
- *
- * @h: A pointer to the address of
- * the head of the listint_t list.
- *
- * Return: The size of the list that was freed.
- *
- * Description: The function sets the head to NULL.
- */
-size_t free_listint_safe(listint_t **h)
+* is_visited2 - check if a node is visited
+* @node: pointer to node
+* @visited: list of visited
+* @count: length of visited
+* Return: 1 if is visited and 0 otherwise
+*/
+int is_visited2(listint_t *node, listint_t **visited, int count)
 {
-	listint_t *tmp;
-	size_t nodes, index;
-
-	nodes = looped_listint_count(*h);
-
-	if (nodes == 0)
-	{
-		for (; h != NULL && *h != NULL; nodes++)
-		{
-			tmp = (*h)->next;
-			free(*h);
-			*h = tmp;
-		}
-	}
-
-	else
-	{
-		for (index = 0; index < nodes; index++)
-		{
-			tmp = (*h)->next;
-			free(*h);
-			*h = tmp;
-		}
-
-		*h = NULL;
-	}
-
-	h = NULL;
-
-	return (nodes);
+int i = 0;
+while (i < count)
+{
+if (node == visited[i])
+return (1);
+i++;
+}
+return (0);
 }
