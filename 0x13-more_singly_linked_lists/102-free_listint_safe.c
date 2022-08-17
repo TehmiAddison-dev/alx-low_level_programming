@@ -5,7 +5,6 @@ int is_visited2(listint_t *node, listint_t **visited, int count);
 * @head: pointer to head
 * Return: number of nodes
 */
-
 size_t free_listint_safe(listint_t **head)
 {
 listint_t *tmp, *visited[1024];
