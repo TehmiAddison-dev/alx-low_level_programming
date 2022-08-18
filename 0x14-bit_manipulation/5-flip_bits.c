@@ -14,3 +14,4 @@ int dist = 0;
 while (shift--)
 dist += (n >> shift & 1) != (m >> shift & 1);
 return (dist);
+}
