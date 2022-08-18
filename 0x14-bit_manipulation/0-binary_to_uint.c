@@ -23,3 +23,4 @@ res += base;
 base *= 2;
 }
 return (res);
+}
