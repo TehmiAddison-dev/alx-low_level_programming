@@ -21,3 +21,4 @@ if (o == -1 || w == -1)
 return (-1);
 close(o);
 return (1);
+}
