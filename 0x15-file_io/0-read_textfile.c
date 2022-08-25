@@ -28,3 +28,4 @@ write(STDOUT_FILENO, buffer, read_status);
 total += read_status;
 close(txt_file);
 return (total);
+}
