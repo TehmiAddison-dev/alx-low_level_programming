@@ -1,10 +1,11 @@
-#include "main.h"
+#include <stdio.h>
 /**
-* placeholder2 - define function
-* @void: describe argument
-* Return: 0 on success
+* main - The entry point for program to get header of ELF file
+* @argc: The number of arguments
+* @argv: The pointer to array of arguments
+* Return: 1 on success, error code on failure
 */
-int placeholder2(void)
+int main(int argc, char *argv[])
 {
-return (0);
-}
+printf("argc:%d, argv:%p\n", argc, (void *)*argv);
+return (1);
