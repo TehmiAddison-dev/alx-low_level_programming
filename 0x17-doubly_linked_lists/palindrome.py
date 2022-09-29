@@ -19,4 +19,4 @@ for i in range(999, 101, -1):
         if palcheck(i * j) == 1 and i * j > result:
             result = i * j
             print('{:d} * {:d} = {:d}'.format(i, j, i * j), "is a palindrome")
-print(result
+print(result)
