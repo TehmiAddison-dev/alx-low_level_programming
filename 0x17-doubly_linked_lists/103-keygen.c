@@ -98,3 +98,4 @@ int main(int ac, char *av[])
 	key[6] = '\0';
 	printf("%s\n", key);
 	return (0);
+}
