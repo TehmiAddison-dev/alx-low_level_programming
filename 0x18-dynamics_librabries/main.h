@@ -22,4 +22,4 @@ char *_strstr(char *haystack, char *needle);
 char *_strcpy(char *dest, char *src);
 int _putchar(char c);
 void _puts(char *s);
-#endi
+#endif
