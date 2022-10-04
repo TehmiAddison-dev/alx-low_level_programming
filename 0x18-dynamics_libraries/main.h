@@ -1,5 +1,5 @@
-#ifndef HEADER_H
-#define HEADER_H
+#ifndef MAIN_H
+#define MAIN_H
 
 int _isupper(int c);
 char *_memset(char *s, char b, unsigned int n);
@@ -22,4 +22,5 @@ char *_strstr(char *haystack, char *needle);
 char *_strcpy(char *dest, char *src);
 int _putchar(char c);
 void _puts(char *s);
-#endif
+#endif /* MAIN_H */
+
